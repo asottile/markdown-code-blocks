@@ -1,3 +1,6 @@
+[![Build Status](https://travis-ci.org/asottile/markdown-code-blocks.svg?branch=master)](https://travis-ci.org/asottile/markdown-code-blocks)
+[![Coverage Status](https://coveralls.io/repos/github/asottile/markdown-code-blocks/badge.svg?branch=master)](https://coveralls.io/github/asottile/markdown-code-blocks?branch=master)
+
 markdown-code-blocks
 ====================
 
