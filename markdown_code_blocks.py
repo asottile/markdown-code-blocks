@@ -17,5 +17,5 @@ class CodeRenderer(mistune.Renderer):
         return pygments.highlight(code, lexer=lexer, formatter=formatter)
 
 
-def highlight(doc):
-    return mistune.Markdown(CodeRenderer(escape=True, hard_wrap=False))(doc)
+def highlight(doc, Renderer=CodeRenderer):
+    return mistune.Markdown(Renderer(escape=True, hard_wrap=False))(doc)

@@ -1,6 +1,7 @@
 from __future__ import absolute_import
 from __future__ import unicode_literals
 
+from markdown_code_blocks import CodeRenderer
 from markdown_code_blocks import highlight
 
 
@@ -38,3 +39,17 @@ def test_highlight_plain_text():
         'this is plain text, such class.\n'
         '</pre></div>\n'
     )
+
+
+def test_custom_renderer():
+    class MyRenderer(CodeRenderer):
+        def block_code(self, *args):
+            return 'nope'
+    ret = highlight(
+        'hello\n'
+        '```\n'
+        'world\n'
+        '```\n',
+        Renderer=MyRenderer,
+    )
+    assert ret == '<p>hello</p>\nnope'
