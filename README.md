@@ -18,6 +18,13 @@ markdown, but for python.
 The library provides a single function `highlight` which takes in a markdown
 string and returns html.
 
+You can also use the cli `markdown-code-blocks-highlight`.  It optionally
+takes a single filename (defaulting to stdin) and writes to stdout.
+
+For example:
+
+`markdown-code-blocks-highlight f.md > f.htm`
+
 
 ## pygments css
 
