@@ -18,4 +18,7 @@ setup(
     ],
     install_requires=['mistune', 'pygments'],
     py_modules=['markdown_code_blocks'],
+    entry_points={'console_scripts': [
+        'markdown-code-blocks-highlight=markdown_code_blocks:main',
+    ]},
 )

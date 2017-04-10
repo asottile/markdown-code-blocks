@@ -3,6 +3,7 @@ from __future__ import unicode_literals
 
 from markdown_code_blocks import CodeRenderer
 from markdown_code_blocks import highlight
+from markdown_code_blocks import main
 
 
 def test_simple_markdown():
@@ -53,3 +54,11 @@ def test_custom_renderer():
         Renderer=MyRenderer,
     )
     assert ret == '<p>hello</p>\nnope'
+
+
+def test_main(capsys, tmpdir):
+    f = tmpdir.join('f')
+    f.write('## ohai\n')
+    main((f.strpath,))
+    out, _ = capsys.readouterr()
+    assert out == '<!doctype html><html><body><h2>ohai</h2>\n</body></html>\n'
