@@ -18,7 +18,7 @@ def test_highlight_python():
         '```\n'
     )
     assert ret == (
-        '<div class="highlight"><pre>'
+        '<div class="highlight python"><pre>'
         '<span></span>'
         '<span class="k">print</span>'
         '<span class="p">(</span>'
