@@ -14,9 +14,11 @@ class CodeRenderer(mistune.Renderer):
     def block_code(self, code, lang):
         try:
             lexer = pygments.lexers.get_lexer_by_name(lang, stripnl=False)
+            cssclass = 'highlight {}'.format(lang)
         except pygments.util.ClassNotFound:
             lexer = pygments.lexers.get_lexer_by_name('text', stripnl=False)
-        formatter = pygments.formatters.HtmlFormatter()
+            cssclass = 'highlight'
+        formatter = pygments.formatters.HtmlFormatter(cssclass=cssclass)
         return pygments.highlight(code, lexer=lexer, formatter=formatter)
 
 
