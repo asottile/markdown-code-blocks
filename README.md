@@ -1,5 +1,5 @@
-[![Build Status](https://travis-ci.org/asottile/markdown-code-blocks.svg?branch=master)](https://travis-ci.org/asottile/markdown-code-blocks)
-[![Coverage Status](https://coveralls.io/repos/github/asottile/markdown-code-blocks/badge.svg?branch=master)](https://coveralls.io/github/asottile/markdown-code-blocks?branch=master)
+[![Build Status](https://dev.azure.com/asottile/asottile/_apis/build/status/asottile.markdown-code-blocks?branchName=master)](https://dev.azure.com/asottile/asottile/_build/latest?definitionId=45&branchName=master)
+[![Azure DevOps coverage](https://img.shields.io/azure-devops/coverage/asottile/asottile/45/master.svg)](https://dev.azure.com/asottile/asottile/_build/latest?definitionId=45&branchName=master)
 
 markdown-code-blocks
 ====================
