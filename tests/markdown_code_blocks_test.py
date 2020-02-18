@@ -1,6 +1,3 @@
-from __future__ import absolute_import
-from __future__ import unicode_literals
-
 from markdown_code_blocks import CodeRenderer
 from markdown_code_blocks import highlight
 from markdown_code_blocks import main
@@ -15,12 +12,12 @@ def test_highlight_python():
     ret = highlight(
         '```python\n'
         'print("hello world")\n'
-        '```\n'
+        '```\n',
     )
     assert ret == (
         '<div class="highlight python"><pre>'
         '<span></span>'
-        '<span class="k">print</span>'
+        '<span class="nb">print</span>'
         '<span class="p">(</span>'
         '<span class="s2">&quot;hello world&quot;</span>'
         '<span class="p">)</span>\n'
@@ -32,7 +29,7 @@ def test_highlight_plain_text():
     ret = highlight(
         '```\n'
         'this is plain text, such class.\n'
-        '```\n'
+        '```\n',
     )
     assert ret == (
         '<div class="highlight"><pre>'
