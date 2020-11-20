@@ -9,11 +9,11 @@ import pygments.lexers
 import pygments.util
 
 
-class CodeRenderer(mistune.Renderer):
-    def block_code(self, code: str, lang: str) -> str:
+class CodeRenderer(mistune.HTMLRenderer):
+    def block_code(self, code: str, info: Optional[str] = None) -> str:
         try:
-            lexer = pygments.lexers.get_lexer_by_name(lang, stripnl=False)
-            cssclass = f'highlight {lang}'
+            lexer = pygments.lexers.get_lexer_by_name(info, stripnl=False)
+            cssclass = f'highlight {info}'
         except pygments.util.ClassNotFound:
             lexer = pygments.lexers.get_lexer_by_name('text', stripnl=False)
             cssclass = 'highlight'
@@ -23,9 +23,9 @@ class CodeRenderer(mistune.Renderer):
 
 def highlight(
         doc: str,
-        Renderer: Type[mistune.Renderer] = CodeRenderer,
+        Renderer: Type[mistune.HTMLRenderer] = CodeRenderer,
 ) -> str:
-    return mistune.Markdown(Renderer(escape=True, hard_wrap=False))(doc)
+    return mistune.Markdown(Renderer())(doc)
 
 
 def main(argv: Optional[Sequence[str]] = None) -> int:
