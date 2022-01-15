@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from markdown_code_blocks import CodeRenderer
 from markdown_code_blocks import highlight
 from markdown_code_blocks import main
