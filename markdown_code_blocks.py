@@ -1,7 +1,7 @@
+from __future__ import annotations
+
 import argparse
-from typing import Optional
 from typing import Sequence
-from typing import Type
 
 import mistune
 import pygments.formatters
@@ -10,7 +10,7 @@ import pygments.util
 
 
 class CodeRenderer(mistune.HTMLRenderer):
-    def block_code(self, code: str, info: Optional[str] = None) -> str:
+    def block_code(self, code: str, info: str | None = None) -> str:
         try:
             lexer = pygments.lexers.get_lexer_by_name(info, stripnl=False)
             cssclass = f'highlight {info}'
@@ -23,12 +23,12 @@ class CodeRenderer(mistune.HTMLRenderer):
 
 def highlight(
         doc: str,
-        Renderer: Type[mistune.HTMLRenderer] = CodeRenderer,
+        Renderer: type[mistune.HTMLRenderer] = CodeRenderer,
 ) -> str:
     return mistune.Markdown(Renderer())(doc)
 
 
-def main(argv: Optional[Sequence[str]] = None) -> int:
+def main(argv: Sequence[str] | None = None) -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument('filename', default='/dev/stdin')
     args = parser.parse_args(argv)
