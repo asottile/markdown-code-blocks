@@ -41,6 +41,30 @@ def test_highlight_plain_text():
     )
 
 
+def test_highlight_tables():
+    ret = highlight(
+        '|a|b|\n'
+        '|-|-|\n'
+        '|1|2|\n',
+    )
+    assert ret == '''\
+<table>
+<thead>
+<tr>
+  <th>a</th>
+  <th>b</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>1</td>
+  <td>2</td>
+</tr>
+</tbody>
+</table>
+'''
+
+
 def test_custom_renderer():
     class MyRenderer(CodeRenderer):
         def block_code(self, *args):
