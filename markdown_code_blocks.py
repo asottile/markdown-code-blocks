@@ -25,7 +25,10 @@ def highlight(
         doc: str,
         Renderer: type[mistune.HTMLRenderer] = CodeRenderer,
 ) -> str:
-    return mistune.Markdown(Renderer())(doc)
+    return mistune.create_markdown(
+        renderer=Renderer(),
+        plugins=['strikethrough', 'footnotes', 'table'],
+    )(doc)
 
 
 def main(argv: Sequence[str] | None = None) -> int:
