@@ -12,7 +12,9 @@ markdown, but for python.
 
 ## Installation
 
-`pip install markdown-code-blocks`
+```bash
+pip install markdown-code-blocks
+```
 
 ## Usage
 
