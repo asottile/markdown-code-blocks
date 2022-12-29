@@ -1,5 +1,4 @@
-[![Build Status](https://dev.azure.com/asottile/asottile/_apis/build/status/asottile.markdown-code-blocks?branchName=main)](https://dev.azure.com/asottile/asottile/_build/latest?definitionId=45&branchName=main)
-[![Azure DevOps coverage](https://img.shields.io/azure-devops/coverage/asottile/asottile/45/main.svg)](https://dev.azure.com/asottile/asottile/_build/latest?definitionId=45&branchName=main)
+[![build status](https://github.com/asottile/markdown-code-blocks/actions/workflows/main.yml/badge.svg)](https://github.com/asottile/markdown-code-blocks/actions/workflows/main.yml)
 [![pre-commit.ci status](https://results.pre-commit.ci/badge/github/asottile/markdown-code-blocks/main.svg)](https://results.pre-commit.ci/latest/github/asottile/markdown-code-blocks/main)
 
 markdown-code-blocks
