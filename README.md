@@ -25,7 +25,7 @@ takes a single filename (defaulting to stdin) and writes to stdout.
 
 For example:
 
-`markdown-code-blocks-highlight f.md > f.htm`
+`markdown-code-blocks-highlight f.md > f.html`
 
 
 ## pygments css
