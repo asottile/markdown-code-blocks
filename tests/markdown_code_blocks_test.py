@@ -21,7 +21,7 @@ def test_highlight_python():
         '<span></span>'
         '<span class="nb">print</span>'
         '<span class="p">(</span>'
-        '<span class="s2">&quot;hello world&quot;</span>'
+        '<span class="s2">"hello world"</span>'
         '<span class="p">)</span>\n'
         '</pre></div>\n'
     )
